@@ -1,7 +1,6 @@
 package com.data.data.note;
 
 import lombok.Data;
-
 import javax.persistence.*;
 
 @Entity
