@@ -1,4 +1,4 @@
-package com.data.data.note;
+package com.data.data.user;
 
 import lombok.Data;
 
@@ -11,7 +11,8 @@ import java.util.Collection;
 
 @Data
 @Entity
-public class NoteSecurity implements UserDetails {
+@Table(name = "\"user\"")
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

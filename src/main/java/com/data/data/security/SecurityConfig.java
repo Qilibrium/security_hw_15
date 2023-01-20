@@ -1,6 +1,6 @@
 package com.data.data.security;
 
-import com.data.data.repository.CreatorNoteRepository;
+import com.data.data.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.Customizer;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @EnableWebSecurity
 @Service
 public class SecurityConfig{
-    private final CreatorNoteRepository creatorNoteRepository;
+    private final UserRepository userRepository;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -33,6 +33,6 @@ public class SecurityConfig{
 
     @Bean
     public UserDetailsService userDetailsService(){
-        return name -> creatorNoteRepository.findByName(name);
+        return name -> userRepository.findByName(name);
     }
 }

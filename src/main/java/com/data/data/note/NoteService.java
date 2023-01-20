@@ -8,7 +8,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
-public class NoteListService {
+public class NoteService {
     private final NoteRepository noteRepository;
 
     public void add(Note note) {

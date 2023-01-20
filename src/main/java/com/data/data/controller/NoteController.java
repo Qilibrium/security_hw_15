@@ -1,7 +1,7 @@
 package com.data.data.controller;
 
 import com.data.data.note.Note;
-import com.data.data.note.NoteListService;
+import com.data.data.note.NoteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.RedirectView;
 @RestController
 public class NoteController {
 
-  private final NoteListService noteService;
+  private final NoteService noteService;
 
     @GetMapping("/list")
     public ModelAndView getListOfNotes(){
